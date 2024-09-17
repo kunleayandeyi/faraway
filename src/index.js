@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+const App = function () {
+  return (
+    <div>
+      <Logo />
+      <Form/>
+      <PackingList/>
+      <Stats/>
+    </div>
+  );
+};
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const Logo = function () {
+  return <h1>⌚far away💼</h1>;
+};
+const Form=function(){
+  return<div className="add-form">
+    <h3>What do you need for a successful trip?😍</h3>
+  </div>
+}
+const PackingList=function(){
+  return <div className="list">List of item</div>
+}
+const Stats= function(){
+  return <footer className="stats"> You have x items on your list y items have been packed(z%)</footer>
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
